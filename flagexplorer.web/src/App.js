@@ -21,10 +21,14 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [countryDetails, setCountryDetails] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios.get(process.env.REACT_APP_BASE_URL + "/Country/countries")
-      .then((res) => setCountries(res.data.content || []))
+      .then((res) =>{
+         setCountries(res.data.content || [])
+         setIsLoading(false)
+        })
       .catch((err) => console.error("Error:", err));
   }, []);
   
@@ -61,7 +65,7 @@ function App() {
 
   return (
     <div style={{ height: 500, width: "40%", margin: "auto", marginTop: 40 }}>
-      {countries && <DataGrid
+      {!isLoading && <DataGrid
         rows={countries}
         columns={columns}
         getRowId={(row) => row.name}
