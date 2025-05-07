@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+
+  flagexplorerapi:
+        container_name: FlagExplorerAPI
+        image: flagexplorerapi
+        build:
+            context: .
+            dockerfile: FlagExplorer.API/Dockerfile
+        ports:
+            - 35001:8080
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Development
