@@ -10,6 +10,9 @@ RUN npm install
 # Copy the rest of the source code
 COPY . .
 
+# Run unit tests
+RUN npm test -- --watchAll=false
+
 # Build the app
 RUN npm run build
 
