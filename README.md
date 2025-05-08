@@ -2,7 +2,7 @@
 
 ## About The Project setup: 
 
-At a root folder of **flagExplorer/FlagExplorer** we have a docker-compose yaml file for running the API in **DOCKER** using the following command and a Dockerfile under this path **flagExplorer/FlagExplorer**, also runs
+At a root folder of **flagExplorer/FlagExplorer** we have a docker-compose yaml file for running the API in **DOCKER** using the following command on **CMD** and a Dockerfile under this path **flagExplorer/FlagExplorer**, also runs
 Tests for the API:
 
 ```bash
@@ -20,7 +20,7 @@ http://localhost:35001/swagger/index.html
 
 ## About The Project setup: 
 
-At a root folder of **flagExplorer/flagexplorer.web** we have a docker-compose yaml file for running the React WEB APP in **DOCKER** using the following command:
+At a root folder of **flagExplorer/flagexplorer.web** we have a docker-compose yaml file for running the React WEB APP in **DOCKER** using the following command on **CMD**:
 
 ```bash
 docker-compose up -d --build
